@@ -14,7 +14,7 @@ Coffee Rank is an application created as a group project for SEIS 622. The app a
 ## Known Issues
 See [Issues List](https://github.com/ADWrobo/coffee-ranking-platform/issues).
 
-If you discover any errors, feel free to [create an issue](https://github.com/ADWrobo/coffee-ranking-platform/issues/new) on GitHub. If you would like to contribute a fix or add additional information to the guide see [Contributing](https://github.com/StudentShop/Tormach-Guide/blob/master/README.md#contributing) below.
+If you discover any errors, feel free to [create an issue](https://github.com/ADWrobo/coffee-ranking-platform/issues/new) on GitHub.
 
 ## Authors
 
