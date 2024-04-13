@@ -41,6 +41,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 3. Install ExpressJS
 4. TODO
 
+## Using Docker
+
+This project supports using Docker. To do so, ensure Docker desktop is installed on your device, then:
+1. Run `docker-compose build` - this will build the Docker image
+2. Run `docker-compose up -d` - this will run the container
+
 ## Known Issues
 See [Issues List](https://github.com/ADWrobo/coffee-ranking-platform/issues).
 
