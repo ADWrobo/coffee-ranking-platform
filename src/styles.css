@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background-image: url("assets/coffee_beans.jpg");
+    background-size: cover;
+    align-content: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
+}
+
+.nav {
+    background-color: whitesmoke;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 50px;
+    z-index: 1;
+}
+
+.rank-button {
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    bottom: 12px;
+    right: 30px;
+    width: 100px;
+    border-color: black;
+    border-radius: 12px;
+    border-width: 1px;
+    z-index: 1;
+    background-color: black;
+    color: white;
+}
+
+.rank-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.content-container {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
