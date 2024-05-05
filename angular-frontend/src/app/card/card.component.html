@@ -1,0 +1,15 @@
+<div class="card" *ngFor="let rank of ranks">
+    <div class="top-card-container">
+        <h2>{{rank.drink}}</h2>
+        <h3>{{rank.cafe}}</h3>
+        <h4>{{rank.location}}</h4>
+        <span class="star">{{rank.rating}}</span><span class="star-empty">{{rank.ratingRemainder}}</span>
+    </div>
+    <div class="text-card-container">
+        <p>{{rank.comment}}</p>
+    </div>
+    <div class="button-card-container">
+        <button type="button" class="edit">Edit</button>
+        <button type="button" class="delete">Delete</button>
+    </div>
+</div>
