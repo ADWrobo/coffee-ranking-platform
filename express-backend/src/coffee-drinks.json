@@ -1,25 +1,34 @@
-{
-  "drinkCards": [
-    {
-      "drink": "Black Coffee",
-      "cafe": "Mocha Joe's",
-      "location": "Minneapolis, Mn",
-      "rating": "★★★★",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
-    },
-    {
-      "drink": "Minne Mocha",
-      "cafe": "Jane's Cafe",
-      "location": "Minneapolis, Mn",
-      "rating": "★★★★★",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
-    },
-    {
-      "drink": "Espresso",
-      "cafe": "Pete's Place",
-      "location": "St. Paul, Mn",
-      "rating": "★★★★",
-      "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
-    }
-  ]
-}
+[
+  {
+    "drink": "Black Coffee",
+    "cafe": "Mocha Joe's",
+    "location": "Minneapolis, Mn",
+    "rating": "★★★★",
+    "ratingRemainder": "★",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
+  },
+  {
+    "drink": "Minne Mocha",
+    "cafe": "Jane's Cafe",
+    "location": "Minneapolis, Mn",
+    "rating": "★★★★★",
+    "ratingRemainder": "",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
+  },
+  {
+    "drink": "Espresso",
+    "cafe": "Pete's Place",
+    "location": "St. Paul, Mn",
+    "rating": "★★★★",
+    "ratingRemainder": "★",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
+  },
+  {
+    "drink": "Maple Oat Latte",
+    "cafe": "Spy House",
+    "location": "St. Paul, Mn",
+    "rating": "★★★★★",
+    "ratingRemainder": "",
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
+  }
+]
