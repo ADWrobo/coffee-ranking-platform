@@ -1,4 +1,5 @@
 export interface IRank {
+    id: number;
     drink: string;
     cafe: string;
     location: string;
