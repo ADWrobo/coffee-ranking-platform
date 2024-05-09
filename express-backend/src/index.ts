@@ -42,3 +42,28 @@ app.get('/ranks', function(req: any, res: any) {
   res.status(200);
   return res.json(ranks);
 });
+
+//GET endpoint that takes in an id as a parameter and returns the rank matching that id.
+app.get('/ranks/:id', (req: any, res: any) => {
+  const rank = ranks.find(c => c.id == req.params.id);
+  if (rank) {
+      res.status(200);
+      return res.json(rank);
+  }
+  res.status(404);
+  return res.json({ error: `Rank not found.` });
+});
+
+//Create a POST(Create) endpoint that adds a new rank
+app.post('/ranks', function(req: any, res: any) {
+  const rank = ranks.find(c => c.id == req.body.id);
+    if (rank) {
+        res.status(500);
+        return res.json("A rank with this id already exists.");
+    }
+  console.log(`body is ${JSON.stringify(req.body)}`);
+  const newRank: IRank = req.body;
+  //you could do a validator by including the next 2 lines in an if statement such as if(newPerson.firstname && newPerson.lastname)
+  ranks.push(newRank);
+  res.status(200);
+});
