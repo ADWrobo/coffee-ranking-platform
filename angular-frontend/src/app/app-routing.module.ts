@@ -6,7 +6,7 @@ import { CreateComponent } from './create/create.component';
 const routes: Routes = [
   { path: 'home', component: CardComponent},
   { path: 'create', component: CreateComponent},
-  { path: '', redirectTo: 'contacts', pathMatch: 'full'}
+  { path: '', redirectTo: 'home', pathMatch: 'full'}
 ];
 
 @NgModule({
