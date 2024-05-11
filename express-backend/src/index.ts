@@ -43,13 +43,12 @@ app.delete("/ranks/:id", (req: any, res: any) => {
   if (req.params.id) {
     const rank = ranks.find((c) => c.id == req.params.id);
     if (rank) {
-      delete rank.id;
-      delete rank.drink;
-      delete rank.cafe;
-      delete rank.location;
-      delete rank.rating;
-      delete rank.ratingRemainder;
-      delete rank.comment;
+    var index = ranks.findIndex(function(element) {
+      return element.id === rank.id;
+  });
+  if (index !== -1) {
+      ranks.splice(index, 1);
+  }
       res.status(200);
       return res.json(ranks);
     }
