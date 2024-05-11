@@ -33,6 +33,24 @@
     "location": "St. Paul, Mn",
     "rating": "★★★★★",
     "ratingRemainder": "",
-    "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec pellentesque purus id magna molestie mollis. Aliquam orci neque, laoreet condimentum varius quis, blandit vitae nunc. Vivamus in ultrices nibh. Fusce sit amet luctus felis, sed egestas orci."
+    "comment": "Delicious both hot & cold."
+  },
+  {
+    "id": 5,
+    "drink": "Cubano",
+    "cafe": "JS Bean Factory",
+    "location": "St. Paul, Mn",
+    "rating": "★★★★★",
+    "ratingRemainder": "",
+    "comment": "Perfectly strong and sweet."
+  },
+  {
+    "id": 6,
+    "drink": "Dirty Chai",
+    "cafe": "Treeline Coffee Roasters",
+    "location": "Bozeman, MT",
+    "rating": "★★",
+    "ratingRemainder": "★★★",
+    "comment": "Homemade chai is ginger forward."
   }
 ]
