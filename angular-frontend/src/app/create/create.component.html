@@ -27,7 +27,7 @@
                 </div>
                 <div class="control">
                     <label>Rating (1-5) </label>
-                    <input type="text" name="rating" [(ngModel)]="rating" 
+                    <input type="text" name="rating" [(ngModel)]="rateEntered" 
                     pattern="[1-5]" required #ratingField="ngModel" />
                     <span *ngIf="!ratingField.valid && saveUnsuccessful">Rank must be 1-5.</span>
                 </div>

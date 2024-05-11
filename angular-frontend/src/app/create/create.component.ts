@@ -20,9 +20,9 @@ export class CreateComponent {
   ratingRemainder: string;
   comment: string;
   saveUnsuccessful: boolean;
-  httpClient: any;
+  rateEntered: string;
 
-  constructor(public createHttpClient: HttpClient, public router: Router) {
+  constructor(public httpClient: HttpClient, public router: Router) {
   
  }
 
@@ -35,6 +35,7 @@ export class CreateComponent {
       return;
     }
     console.log(ngForm);
+    this.convertRate(this.rateEntered);
 
     const options = {
       headers: new HttpHeaders({
@@ -55,7 +56,7 @@ export class CreateComponent {
       comment: this.comment
     };
 
-    this.createHttpClient.post<any>("http://localhost:8080/ranks", data, options)
+    this.httpClient.post<any>("http://localhost:8080/ranks", data, options)
       .subscribe({
         next: () => {
           console.log("Call successful");
@@ -68,6 +69,33 @@ export class CreateComponent {
       
     ngForm.resetForm();
     this.router.navigate(['home']);
+  }
+
+  convertRate(rateEntered: string) {
+    switch(rateEntered) {
+      case "1":
+        this.rating = "★";
+        this.ratingRemainder = "★★★★";
+        break;
+      case "2":
+        this.rating = "★★";
+        this.ratingRemainder = "★★★";
+        break;
+      case "3":
+        this.rating = "★★★";
+        this.ratingRemainder = "★★";
+        break;
+      case "4":
+        this.rating = "★★★★";
+        this.ratingRemainder = "★";
+        break;
+      case "5":
+        this.rating = "★★★★★";
+        this.ratingRemainder = "";
+        break;
+      default:
+        console.log("Invalid rating.");
+    }
   }
 
 }
