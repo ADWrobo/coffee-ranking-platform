@@ -1,17 +1,44 @@
 <div class="content-container">
     <div class="card">
-        <div class="top-card-container">
-            <h2>drink</h2>
-            <h3>rank.cafe</h3>
-            <h4>rank.location</h4>
-            <span class="star">rank.rating</span><span class="star-empty">rank.ratingRemainder</span>
-        </div>
-        <div class="text-card-container">
-            <p>rank.comment</p>
-        </div>
-        <div class="button-card-container">
-            <button type="button" class="cancel" [routerLink]="['/home']">Cancel</button>
-            <button type="button" class="save">Save</button>
-        </div>
+        <form class="test-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+            <div class="top-card-container">
+                <h2>Rank Your Coffee</h2>
+                <div class="control">
+                    <label>Id</label>
+                    <input type="text" name="id" [(ngModel)]="id" 
+                    pattern="[0-9]{1,9}" required #idField="ngModel" />
+                    <span *ngIf="!idField.valid && saveUnsuccessful">Id must be a number.</span>
+                </div>
+                <div class="control">
+                    <label>Drink</label>
+                    <input type="text" name="drink" [(ngModel)]="drink" required #drinkField="ngModel" />
+                    <span *ngIf="!drinkField.valid && saveUnsuccessful">Name of Drink is Required.</span>
+                </div>
+                <div class="control">
+                    <label>Cafe</label>
+                    <input type="text" name="cafe" [(ngModel)]="cafe" required #cafeField="ngModel" />
+                    <span *ngIf="!cafeField.valid && saveUnsuccessful">Cafe Name is required.</span>
+                </div>
+                <div class="control">
+                    <label>Location</label>
+                    <input type="text" name="location" placeholder="City, State" [(ngModel)]="location" 
+                    required #locationField="ngModel" />
+                    <span *ngIf="!locationField.valid && saveUnsuccessful">Location of the Cafe is required.</span>
+                </div>
+                <div class="control">
+                    <label>Rating</label>
+                    <input type="text" name="rating" [(ngModel)]="rating" required #ratingField="ngModel" />
+                    <span *ngIf="!ratingField.valid && saveUnsuccessful">Rating is required.</span>
+                </div>
+                <div class="control">
+                    <label>Comment</label>
+                    <input type="text" name="comment" [(ngModel)]="comment" #commentField="ngModel" />
+                </div>
+            </div>
+            <div class="button-card-container">
+                <button type="button" class="cancel" [routerLink]="['/home']">Cancel</button>
+                <input type="submit" value="Save" class="save" />
+            </div>
+        </form>
     </div>
 </div>
