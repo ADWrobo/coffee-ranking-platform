@@ -39,4 +39,9 @@ export class CardComponent implements OnInit {
       });
   }
 
+  deleteCard(id: number) {
+    this.httpClient.delete<IRank[]>("http://localhost:8080/ranks/" + id)
+    .subscribe();
+  }
+
 }
