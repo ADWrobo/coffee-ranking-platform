@@ -32,16 +32,30 @@ let ranks: IRank[] = [];
 fs.readFile(jsonPath, function (err: any, data: any) {
   if (err) {
     console.log('Unable to read json data file: ' + jsonPath);
+    console.log(jsonPath);
   } else {
     ranks = JSON.parse(data);
   }
 });
 
-// GET endpoint returning all ranks
-app.get('/ranks', function(req: any, res: any) {
-  res.status(200);
-  return res.json(ranks);
-});
+// DELETE endpoint
+app.delete("/ranks/:id", (req: any, res: any) => {
+  if (req.params.id) {
+    const rank = ranks.find((c) => c.id == req.params.id);
+    if (rank) {
+      delete rank.id;
+      delete rank.drink;
+      delete rank.cafe;
+      delete rank.location;
+      delete rank.rating;
+      delete rank.ratingRemainder;
+      delete rank.comment;
+      res.status(200);
+      return res.json(ranks);
+    }
+  }
+  res.status(404);
+  return res.json({ error: `Drink with id: ${req.params.id} not found.` });
 
 //GET endpoint that takes in an id as a parameter and returns the rank matching that id.
 app.get('/ranks/:id', (req: any, res: any) => {
