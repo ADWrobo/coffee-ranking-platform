@@ -59,7 +59,7 @@ h4 {
     bottom: 25px;
     padding-right: 10px;
     padding-left: 10px;
-    overflow: scroll;
+    overflow: auto;
 
 }
 
