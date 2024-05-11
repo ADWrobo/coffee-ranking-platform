@@ -80,4 +80,5 @@ app.post('/ranks', function(req: any, res: any) {
   //you could do a validator by including the next 2 lines in an if statement such as if(newPerson.firstname && newPerson.lastname)
   ranks.push(newRank);
   res.status(200);
+  return res.json("Coffee Rank added successfully.");
 });

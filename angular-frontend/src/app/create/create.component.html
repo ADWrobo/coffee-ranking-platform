@@ -26,13 +26,14 @@
                     <span *ngIf="!locationField.valid && saveUnsuccessful">Location of the Cafe is required.</span>
                 </div>
                 <div class="control">
-                    <label>Rating</label>
-                    <input type="text" name="rating" [(ngModel)]="rating" required #ratingField="ngModel" />
-                    <span *ngIf="!ratingField.valid && saveUnsuccessful">Rating is required.</span>
+                    <label>Rating (1-5) </label>
+                    <input type="text" name="rating" [(ngModel)]="rating" 
+                    pattern="[1-5]" required #ratingField="ngModel" />
+                    <span *ngIf="!ratingField.valid && saveUnsuccessful">Rank must be 1-5.</span>
                 </div>
                 <div class="control">
                     <label>Comment</label>
-                    <input type="text" name="comment" [(ngModel)]="comment" #commentField="ngModel" />
+                    <textarea name="comment" [(ngModel)]="comment" #commentField="ngModel"></textarea>
                 </div>
             </div>
             <div class="button-card-container">

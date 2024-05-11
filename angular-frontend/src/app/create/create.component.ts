@@ -22,7 +22,7 @@ export class CreateComponent {
   saveUnsuccessful: boolean;
   httpClient: any;
 
- constructor(httpClient: HttpClient, public router: Router) {
+  constructor(public createHttpClient: HttpClient, public router: Router) {
   
  }
 
@@ -32,7 +32,6 @@ export class CreateComponent {
 
     if (!ngForm.valid) {
       this.saveUnsuccessful = true;
-      alert("All Fields are Required");
       return;
     }
     console.log(ngForm);
@@ -51,10 +50,12 @@ export class CreateComponent {
       location: this.location,
       rating: this.rating,
       ratingRemainder: this.ratingRemainder,
+      // rating: this.rating = "★★★★",
+      // ratingRemainder: this.ratingRemainder = "★",
       comment: this.comment
     };
 
-    this.httpClient.post("http://localhost:8080/ranks", data, options)
+    this.createHttpClient.post<any>("http://localhost:8080/ranks", data, options)
       .subscribe({
         next: () => {
           console.log("Call successful");
@@ -64,7 +65,7 @@ export class CreateComponent {
           alert("A rank with this id already exists.")
         }
       });
-
+      
     ngForm.resetForm();
     this.router.navigate(['home']);
   }
