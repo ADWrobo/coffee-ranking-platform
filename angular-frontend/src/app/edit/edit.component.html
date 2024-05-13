@@ -1,0 +1,41 @@
+<div class="content-container">
+  <div class="card">
+    <form class="test-form" #f="ngForm" (ngSubmit)="onFormSubmit(f)">
+      <div class="top-card-container">
+        <h2>Edit Your Coffee Rank</h2>
+        <div class="control">
+          <label>Id</label>
+          <input type="text" name="id" [(ngModel)]="id" pattern="[0-9]{1,9}" required #idField="ngModel" readonly />
+        </div>
+        <div class="control">
+          <label>Drink</label>
+          <input type="text" name="drink" [(ngModel)]="drink" required #drinkField="ngModel" />
+          <span *ngIf="!drinkField.valid && saveUnsuccessful">Name of Drink is Required.</span>
+        </div>
+        <div class="control">
+          <label>Cafe</label>
+          <input type="text" name="cafe" [(ngModel)]="cafe" required #cafeField="ngModel" />
+          <span *ngIf="!cafeField.valid && saveUnsuccessful">Cafe Name is required.</span>
+        </div>
+        <div class="control">
+          <label>Location</label>
+          <input type="text" name="location" placeholder="City, State" [(ngModel)]="location" required #locationField="ngModel" />
+          <span *ngIf="!locationField.valid && saveUnsuccessful">Location of the Cafe is required.</span>
+        </div>
+        <div class="control">
+          <label>Rating (1-5) </label>
+          <input type="text" name="rating" [(ngModel)]="rateEntered" pattern="[1-5]" required #ratingField="ngModel" />
+          <span *ngIf="!ratingField.valid && saveUnsuccessful">Rank must be 1-5.</span>
+        </div>
+        <div class="control">
+          <label>Comment</label>
+          <textarea name="comment" [(ngModel)]="comment" #commentField="ngModel"></textarea>
+        </div>
+      </div>
+      <div class="button-card-container">
+        <button type="button" class="cancel" [routerLink]="['/home']">Cancel</button>
+        <input type="submit" value="Save" class="save" />
+      </div>
+    </form>
+  </div>
+</div>

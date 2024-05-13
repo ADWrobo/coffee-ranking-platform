@@ -1,0 +1,126 @@
+h2 {
+  font-size: 50px;
+  padding: 5px;
+  padding-top: 15px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+label {
+  font-weight: Medium;
+  font-size: 30px;
+  padding: 5px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+  margin-bottom: 10px;
+  width: 60%;
+}
+
+.control {
+  width: 75%;
+  margin-left: 25%;
+}
+
+.test-form>.control {
+  margin-bottom: 20px;
+  padding: 10px;
+
+  >span {
+    color: red;
+    margin-left: 5px;
+  }
+}
+
+.star {
+  color: gold;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.star-empty {
+  color: grey;
+  font-size: 30px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin: 0;
+}
+
+
+.card{
+  background-color: whitesmoke;
+  width: 625px;
+  height: 875px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 15px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.top-card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+}
+
+.button-card-container {
+  background-color: whitesmoke;
+  padding: 24px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.cancel {
+  border-color: black;
+  padding: 5px;
+  width: 60px;
+  border-radius: 12px;
+  border-width: 1px;
+  z-index: 1;
+  position:absolute;
+  margin-bottom: 10px;
+  bottom:0;
+  left: 15px;
+}
+
+.cancel:hover {
+  background-color: lightcoral;
+  transition: 0.3s;
+}
+
+.save {
+  border-color: black;
+  padding: 5px;
+  width: 60px;
+  border-radius: 12px;
+  border-width: 1px;
+  margin-bottom: 10px;
+  z-index: 1;
+  position:absolute;
+  bottom:0;
+  right: 15px;
+}
+
+.save:hover {
+  background-color: lightgreen;
+  transition: 0.3s;
+}
+
