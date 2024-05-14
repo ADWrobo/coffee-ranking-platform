@@ -88,3 +88,18 @@ app.post('/ranks', function (req: any, res: any) {
   res.status(200);
   return res.json("Coffee Rank added successfully.");
 });
+
+// PUT endpoint to update an existing rank
+app.put('/ranks/:id', (req: any, res: any) => {
+  const rank = ranks.find(c => c.id == req.params.id);
+  if (!rank) {
+    res.status(404);
+    return res.json({ error: `Rank with id: ${req.params.id} not found.` });
+  }
+
+  const updatedRank: IRank = req.body;
+  ranks = ranks.map(c => c.id == req.params.id ? updatedRank : c);
+
+  res.status(200);
+  return res.json("Coffee Rank updated successfully.");
+});
