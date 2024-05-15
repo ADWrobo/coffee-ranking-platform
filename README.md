@@ -1,10 +1,26 @@
 # Coffee Rank
 
+## Authors
+
+* Anthony Wroblewski (https://github.com/ADWrobo)
+* Betsy Rowley (https://github.com/BetsyRowley)
+* Charles Allhands (https://github.com/callhands)
+
 ## What is it?
 
 Coffee Rank is an application created as a group project for SEIS 622. The app allows users to create and share ratings of their favorite coffee drinks.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
+
+## Technologies
+* Frontend
+  * HTML
+  * CSS
+  * TypeScript
+  * Angular 
+* Backend
+  * Node
+  * Express
 
 ## Development server
 
@@ -51,12 +67,6 @@ This project supports using Docker. To do so, ensure Docker desktop is installed
 See [Issues List](https://github.com/ADWrobo/coffee-ranking-platform/issues).
 
 If you discover any errors, feel free to [create an issue](https://github.com/ADWrobo/coffee-ranking-platform/issues/new) on GitHub.
-
-## Authors
-
-* Anthony Wroblewski (https://github.com/ADWrobo)
-* Betsy Rowley (https://github.com/BetsyRowley)
-* Charles Allhands (https://github.com/callhands)
 
 ## License
 
